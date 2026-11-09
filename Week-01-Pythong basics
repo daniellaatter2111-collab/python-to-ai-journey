@@ -1,0 +1,72 @@
+num_1 = int(input("Enter the first number: "))
+num_2 = int(input("Enter the second number: "))
+add = num_1 +num_2
+sub = num_1 - num_2
+mul = num_1 * num_2
+
+
+print("Addition of two numbers is", add)
+print("Subtraction of two numbers is", sub)
+print("Multiplication of two numbers is", mul)
+
+if num_2 == 0:
+    print("Division by zero is not allowed")
+else:
+    div = num_1 / num_2
+    print("Division of two numbers is", div)
+
+
+subjects = ["Math", "Science", "Music", "Computer Science"]
+name = input("Please enter your student name: ")
+
+scores = []
+for subject in subjects:
+    score = float(input(f"Please enter your score for {subject}: "))
+    scores.append(score)
+
+average = sum(scores) / len(scores)
+
+print(f"Your name is {name}")
+
+for subject, score in zip(subjects, scores):
+    print(f"Your score in {subject} is {score}")
+
+print(f"Your average score is {average:.2f}")
+
+
+
+name = "Daniella Atter"
+age = 19
+university = "Ghana Communication Technology University"
+cgpa = 3.96
+
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"University: {university}")
+print(f"CGPA: {cgpa:.2f}")
+
+#OR
+
+student_info = {
+    "name": "Daniella Atter",
+    "age": 19,
+    "university": "Ghana Communication Technology University",
+    "cgpa": 3.96
+}
+
+for key, value in student_info.items():
+    print(f"{key}: {value}")
+
+
+#Age calculator
+curr_year = 2026
+
+Dob_year = int(input("Enter your birth year: "))
+age = curr_year - Dob_year
+print(f"Your age is: {age}")
+
+#GPA Calculator
+math_score = float(input("Enter your Math score: "))
+science_score = float(input("Enter your Science score: "))
+computer_science_score = float(input("Enter your Computer Science score: "))
+average_score = ((math_score*3) + (science_score*2) +(computer_science_score*3)) / 8
